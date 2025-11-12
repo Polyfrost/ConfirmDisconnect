@@ -11,5 +11,7 @@ public class ConfirmDisconnectConfig extends Config {
 
     public ConfirmDisconnectConfig() {
         super("confirm_disconnect.json", "Confirm Disconnect", Category.OTHER);
+
+        loadFrom("patcher.toml");
     }
 }
