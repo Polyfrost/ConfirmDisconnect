@@ -7,7 +7,7 @@ public class ConfirmDisconnectConfig extends Config {
 
     public static final ConfirmDisconnectConfig INSTANCE = new ConfirmDisconnectConfig();
     @Switch(title = "Main Toggle")
-    public static boolean mainToggle = false;
+    public boolean mainToggle = false;
 
     public ConfirmDisconnectConfig() {
         super("confirm_disconnect.json", "Confirm Disconnect", Category.OTHER);

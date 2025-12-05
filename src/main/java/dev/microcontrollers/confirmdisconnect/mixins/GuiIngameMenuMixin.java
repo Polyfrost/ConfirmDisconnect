@@ -15,7 +15,7 @@ public class GuiIngameMenuMixin {
 
     @Inject(method = "actionPerformed", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/Minecraft;isIntegratedServerRunning()Z"), cancellable = true)
     public void actionPreformed(GuiButton button, CallbackInfo ci) {
-        if (ConfirmDisconnectConfig.mainToggle) {
+        if (ConfirmDisconnectConfig.INSTANCE.mainToggle) {
             Minecraft.getMinecraft().displayGuiScreen(new ConfirmDisconnectGui(Minecraft.getMinecraft().currentScreen));
             ci.cancel();
         }
